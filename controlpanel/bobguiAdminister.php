@@ -1031,7 +1031,7 @@ class bobguiAdminister extends frontControllerApplication
 		if ($isEditMode) {
 			$form->heading ('', "<p>(If you don't want to make changes after all, return to the <a href=\"{$this->baseUrl}{$data['url']}\">Ballot editing options page</a>.)</p>");
 		}
-		$exclude = array ('id', 'url', 'academicYear', 'provider', 'organisation', 'emailTech', 'emailReturningOfficer', 'organisationLogoUrl', 'electionInfo', 'ballotStart', 'ballotEnd', 'paperVotingEnd', 'instanceCompleteTimestamp', );
+		$exclude = array ('id', 'url', 'academicYear', 'provider', 'organisation', 'emailTech', 'emailReturningOfficer', 'organisationLogoUrl', 'electionInfo', 'ballotStart', 'ballotEnd', 'paperVotingEnd', 'ballotViewableDelayed', 'instanceCompleteTimestamp', );
 		if ($this->settings['disableRonAvailability']) {
 			$exclude[] = 'addRon';
 		}

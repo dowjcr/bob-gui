@@ -1,0 +1,7 @@
+<Files ".ht*">
+Deny from all
+</Files>
+<FilesMatch "^logout.html">
+SetHandler AALogout
+</FilesMatch>
+SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
