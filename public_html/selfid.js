@@ -34,9 +34,15 @@ var SELFID_CATEGORIES = {
 		let checkbox = disclaimer.querySelector("input"); // only input in this element is the checkbox
 		checkbox.addEventListener("change", function(ev) {
 			if (ev.currentTarget.checked) {
-				votes[i].style.display = "block";
+				votes[i].style.display = "table";
 			} else {
 				votes[i].style.display = "none";
+
+				// reset the selections
+				let inputs = votes[i].querySelectorAll("select");
+				for (let j=0; j < inputs.length; ++j) {
+					inputs[j].selectedIndex = 0;
+				}
 			}
 		});
 
